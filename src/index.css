@@ -1,0 +1,363 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* font-family: 'Poppins', sans-serif !important; */
+    color-scheme: light dark;
+  }
+
+
+
+}
+
+/* Start Notification card  */
+.notification {
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  position: relative;
+  width: 18rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
+  --color: #32a6ff;
+}
+
+.notification:before {
+  position: absolute;
+  content: "";
+  inset: 0.0625rem;
+  border-radius: 0.9375rem;
+  z-index: 2
+}
+
+.notification:after {
+  position: absolute;
+  content: "";
+  width: 0.25rem;
+  inset: 0.1rem auto 0.1rem 0.5rem;
+  border-radius: 0.125rem;
+  background: var(--gradient);
+  transition: transform 300ms ease;
+  z-index: 4;
+}
+
+.notification:hover:after {
+  transform: tranneutralX(0.15rem);
+  -webkit-transform: tranneutralX(0.15rem);
+  -moz-transform: tranneutralX(0.15rem);
+  -ms-transform: tranneutralX(0.15rem);
+  -o-transform: tranneutralX(0.15rem);
+}
+
+.notititle {
+  padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+}
+
+.notification:hover .notititle {
+  transform: tranneutralX(0.15rem)
+}
+
+.notibody {
+  padding: 0 1.25rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+}
+
+.notification:hover .notibody {
+  transform: tranneutralX(0.25rem)
+}
+
+.notiglow,
+.notiborderglow {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  transform: tranneutral(-50%, -50%);
+  background: radial-gradient(circle closest-side at center, white, transparent);
+  opacity: 0;
+  transition: opacity 300ms ease;
+  -webkit-transform: tranneutral(-50%, -50%);
+  -moz-transform: tranneutral(-50%, -50%);
+  -ms-transform: tranneutral(-50%, -50%);
+  -o-transform: tranneutral(-50%, -50%);
+}
+
+.notiglow {
+  z-index: 3;
+}
+
+.notiborderglow {
+  z-index: 1;
+}
+
+.notification:hover .notiglow {
+  opacity: 0.1
+}
+
+.notification:hover .notiborderglow {
+  opacity: 0.1
+}
+
+.note {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: tranneutralX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  width: 75%;
+}
+
+/* End Notification card  */
+
+/* Start Card Container  */
+.cardContainer {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 220px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  background-color: rgba(65, 65, 65, 0.308);
+  border: 1px solid rgba(255, 255, 255, 0.089);
+  cursor: pointer;
+}
+
+.city {
+  font-weight: 700;
+  font-size: 0.9em;
+  letter-spacing: 1.2px;
+  color: white;
+}
+
+.weather {
+  font-weight: 500;
+  font-size: 0.7em;
+  letter-spacing: 1.2px;
+  color: rgb(197, 197, 197);
+}
+
+.temp {
+  font-size: 1.8em;
+  color: white;
+}
+
+.minmaxContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.min,
+.max {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0px 20px;
+  gap: 4px;
+}
+
+.max {
+  align-items: flex-start;
+  border-left: 2px solid white;
+}
+
+.maxHeading,
+.minHeading {
+  font-size: 0.7em;
+  font-weight: 600;
+  color: white;
+}
+
+.maxTemp,
+.minTemp {
+  font-size: 0.6em;
+  font-weight: 500;
+  color: rgb(197, 197, 197);
+}
+
+.cardContainer::before {
+  width: 100px;
+  height: 100px;
+  content: "";
+  position: absolute;
+  background-color: rgb(144, 161, 255);
+  border-radius: 50%;
+  left: 100px;
+  top: 50px;
+  transition: all 1s;
+}
+
+.cardContainer:hover::before {
+  transform: tranneutral(-50px, 50px);
+}
+
+/* End Card Container  */
+
+
+
+/* Start Select */
+.select {
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  transition: 300ms;
+  color: white;
+  overflow: hidden;
+}
+
+.selected {
+  background-color: #2a2f3b;
+  padding: 5px;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 100000;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  position: relative;
+  right: 0px;
+  height: 10px;
+  transform: rotate(-90deg);
+  width: 25px;
+  fill: white;
+  z-index: 100000;
+  transition: 300ms;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #2a2f3b;
+  position: relative;
+  top: -100px;
+  opacity: 0;
+  transition: 300ms;
+}
+
+.select:hover>.options {
+  opacity: 1;
+  top: 0;
+}
+
+.select:hover>.selected .arrow {
+  transform: rotate(0deg);
+}
+
+.option {
+  border-radius: 5px;
+  padding: 5px;
+  transition: 300ms;
+  background-color: #2a2f3b;
+  width: 150px;
+  font-size: 15px;
+}
+
+.option:hover {
+  background-color: #323741;
+}
+
+.options input[type="radio"] {
+  display: none;
+}
+
+.options label {
+  display: inline-block;
+}
+
+.options label::before {
+  content: attr(data-txt);
+}
+
+.options input[type="radio"]:checked+label {
+  display: none;
+}
+
+.options input[type="radio"]#all:checked+label {
+  display: none;
+}
+
+.select:has(.options input[type="radio"]#all:checked) .selected::before {
+  content: attr(data-default);
+}
+
+.select:has(.options input[type="radio"]#option-1:checked) .selected::before {
+  content: attr(data-one);
+}
+
+.select:has(.options input[type="radio"]#option-2:checked) .selected::before {
+  content: attr(data-two);
+}
+
+.select:has(.options input[type="radio"]#option-3:checked) .selected::before {
+  content: attr(data-three);
+}
+
+/* End Select */
+
+::-webkit-scrollbar {
+  width: .375rem !important;
+  height: .375rem !important;
+  background-color: initial;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: .25rem !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(203 213 225/var(--tw-bg-opacity)) !important;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: .25rem;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(241 245 249/var(--tw-bg-opacity)) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background-color: #64748b29 !important
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #64748b80 !important
+  }
+}
+
+@media (min-width:1024px) {
+  ::-webkit-scrollbar {
+    padding-right: .5rem;
+  }
+}
