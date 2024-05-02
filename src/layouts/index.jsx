@@ -80,12 +80,12 @@ export default function Layout() {
               </button>
             </div>
           </div>
-          <div className="h-full overflow-hidden">
+          <div className="!z-10 h-full overflow-hidden">
             <div className="dark:bg-neutral-900">
               <div className="relative flex flex-grow overflow-x-hidden">
                 <Sidebar open={open} />
                 <div className="h-full max-h-[90vh] min-h-[90vh] flex-grow overflow-y-auto bg-neutral-100 p-2 md:pr-2 dark:bg-neutral-700/25">
-                  <div className="mx-auto mb-auto">
+                  <div className=" mx-auto mb-auto">
                     <Content />
                   </div>
                   <div className="p-3">
