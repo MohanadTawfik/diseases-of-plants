@@ -10,9 +10,9 @@ const Sidebar = ({ open, onClose }) => {
 
   return (
     <div
-      className={`sm-none duration-175 linear !z-50 flex h-full max-h-[90vh] min-h-[90vh] flex-shrink-0 flex-col border-r border-neutral-200 bg-neutral-100 pb-5
-     pt-5 shadow-2xl backdrop-blur-lg transition-all md:!z-50 lg:!z-50 lg:backdrop-blur-0 xl:!z-0 dark:border-neutral-800 dark:bg-neutral-700/25
-    ${open ? " tranneutral-x-0 w-72" : "-tranneutral-x-96 w-0"}`}
+      className={`md-none duration-175 linear absolute !z-50  flex h-full max-h-[90vh] min-h-[90vh] flex-shrink-0 flex-col space-y-4 border-r border-neutral-200 bg-neutral-100 pb-5 pt-5
+     shadow-2xl backdrop-blur-lg transition-all md:relative md:!z-50 lg:!z-50 lg:backdrop-blur-0 xl:!z-50 dark:border-neutral-800 dark:bg-neutral-700/25
+    ${open ? "tranneutral-x-0 w-72" : "-tranneutral-x-96 w-0"}`}
     >
       <SidebarTab open={open} />
 

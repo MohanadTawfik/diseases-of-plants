@@ -9,7 +9,7 @@ const SidebarTab = ({ open }) => {
 
   return (
     <div
-      className={`ml-4 mr-4 box-border rounded-lg bg-white p-1 text-[14px] [box-shadow:0_0_0px_1px_rgba(0,_0,_0,_0.06)] dark:bg-neutral-800
+      className={`ml-4 mr-4  box-border rounded-lg bg-white p-1 text-[14px] backdrop-blur transition-colors duration-500 [box-shadow:0_0_0px_1px_rgba(0,_0,_0,_0.06)] lg:border-slate-900/10 dark:border-slate-50/[0.06] dark:bg-neutral-800
      ${open ? "block" : "hidden"}
     `}
     >

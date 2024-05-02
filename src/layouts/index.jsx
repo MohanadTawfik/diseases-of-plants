@@ -10,7 +10,7 @@ import Docs from "assets/img/docs@30.8b9a76a2.avif";
 import Docs_Tyni from "assets/img/docs@tinypng.d9e4dcdc.png";
 
 export default function Layout() {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
     window.addEventListener("resize", () =>
@@ -82,7 +82,7 @@ export default function Layout() {
           </div>
           <div className="h-full overflow-hidden">
             <div className="dark:bg-neutral-900">
-              <div className="relative flex flex-grow">
+              <div className="relative flex flex-grow overflow-x-hidden">
                 <Sidebar open={open} />
                 <div className="h-full max-h-[90vh] min-h-[90vh] flex-grow overflow-y-auto bg-neutral-100 p-2 md:pr-2 dark:bg-neutral-700/25">
                   <div className="mx-auto mb-auto">
