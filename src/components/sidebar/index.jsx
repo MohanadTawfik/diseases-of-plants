@@ -14,7 +14,7 @@ const Sidebar = ({ open, onClose }) => {
      pt-5 shadow-2xl backdrop-blur-lg transition-all md:!z-50 lg:!z-50 lg:backdrop-blur-0 xl:!z-0 dark:border-neutral-800 dark:bg-neutral-700/25
     ${open ? " tranneutral-x-0 w-72" : "-tranneutral-x-96 w-0"}`}
     >
-      <SidebarTab />
+      <SidebarTab open={open} />
 
       <div className=" h-full overflow-y-auto">
         <div className="space-y-4 p-4 pb-10">
