@@ -1,7 +1,6 @@
 import Sidebar from "components/sidebar";
 import React from "react";
 import Content from "views/Content";
-import Footer from "components/footer/Footer";
 
 import DefaultImg from "assets/img/default.png";
 import Doc_Dark from "assets/img/docs-dark@30.1a9f8cbf.avif";
@@ -87,9 +86,6 @@ export default function Layout() {
                 <div className="h-full max-h-[90vh] min-h-[90vh] flex-grow overflow-y-auto bg-neutral-100 p-2 md:pr-2 dark:bg-neutral-700/25">
                   <div className=" mx-auto mb-auto">
                     <Content />
-                  </div>
-                  <div className="p-3">
-                    <Footer />
                   </div>
                 </div>
               </div>
