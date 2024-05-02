@@ -43,8 +43,8 @@ export default function Layout() {
         </div>
       </div>
 
-      <div className="flex h-screen overflow-x-hidden bg-white text-sm text-neutral-600 dark:bg-neutral-900 dark:text-white">
-        <div className="flex h-full flex-grow flex-col overflow-x-hidden">
+      <div className="flex h-screen bg-white text-sm text-neutral-600 dark:bg-neutral-900 dark:text-white">
+        <div className="flex h-full flex-grow flex-col">
           <div className="!z-100 sticky top-0 flex w-full flex-col border-b border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-800 dark:text-white">
             <div className="flex w-full items-center">
               <div className="flex items-center text-3xl text-neutral-900 dark:text-white">
@@ -80,16 +80,17 @@ export default function Layout() {
               </button>
             </div>
           </div>
-          <div className="h-full">
-            <div className="relative flex flex-grow dark:bg-neutral-900">
-              <Sidebar open={open} />
-
-              <div className="h-full flex-grow overflow-y-auto bg-neutral-100 p-2 md:pr-2 dark:bg-neutral-700/25">
-                <div className="mx-auto mb-auto">
-                  <Content />
-                </div>
-                <div className="p-3">
-                  <Footer />
+          <div className="h-full overflow-hidden">
+            <div className="dark:bg-neutral-900">
+              <div className="relative flex flex-grow">
+                <Sidebar open={open} />
+                <div className="h-full max-h-[90vh] min-h-[90vh] flex-grow overflow-y-auto bg-neutral-100 p-2 md:pr-2 dark:bg-neutral-700/25">
+                  <div className="mx-auto mb-auto">
+                    <Content />
+                  </div>
+                  <div className="p-3">
+                    <Footer />
+                  </div>
                 </div>
               </div>
             </div>

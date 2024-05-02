@@ -10,13 +10,13 @@ const Sidebar = ({ open, onClose }) => {
 
   return (
     <div
-      className={`sm-none duration-175 linear !z-50 flex min-h-full flex-shrink-0 flex-col border-r border-neutral-200 bg-neutral-100 pb-5
+      className={`sm-none duration-175 linear !z-50 flex h-full max-h-[90vh] min-h-[90vh] flex-shrink-0 flex-col border-r border-neutral-200 bg-neutral-100 pb-5
      pt-5 shadow-2xl backdrop-blur-lg transition-all md:!z-50 lg:!z-50 lg:backdrop-blur-0 xl:!z-0 dark:border-neutral-800 dark:bg-neutral-700/25
     ${open ? " tranneutral-x-0 w-72" : "-tranneutral-x-96 w-0"}`}
     >
       <SidebarTab open={open} />
 
-      <div className=" h-full overflow-y-auto">
+      <div className="h-full overflow-y-auto">
         <div className="space-y-4 p-4 pb-10">
           {selectedType.type.data.map((item, index) => {
             return (
